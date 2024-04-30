@@ -1,3 +1,5 @@
+
+    
 // Envoie une requête GET à l'URL de l'api pour récupérer des données
 fetch("escapeGame.json")
   // Une fois que la réponse est reçue
@@ -22,32 +24,30 @@ function escapeGame(data) {
   // Affiche les données dans la console du navigateur
   let salle=""
   entreprise.activites.forEach(element => {
-    salle += `<div class="activ"> <div class="absolu"><h3>${element.nom}</h3> <p>${element.description}</p> <a href="">Réserver</a> </div> <img src="${element.image}"alt=""></div>`
+    salle += `<div class="activ" data-aos="zoom-in"> <section class="absolu"><h3>${element.nom}</h3> <p>${element.description}</p> <a href="">Réserver</a></section> <img src="${element.image}"alt=""></div>`
   });
 
   let client=""
   entreprise.avantagesClients.forEach(element => {
-    client += `<div class="avantage"> ${element}</div>`
+    client += `<div class="avantage" data-aos="flip-up" > ${element}</div>`
   });
   let present=""
   entreprise.presentation.forEach(element => {
-   present += `<div class="presenta"> <div class="card"> <img src="${element.image}"alt=""><h4>${element.titre}</h4> <p class="prentp">${element.texte}</p> </div></div>`
+   present += `<div class="presenta" data-aos="flip-left"> <div class="card "> <img src="${element.image}"alt=""><h4>${element.titre}</h4> <p class="prentp">${element.texte}</p> </div></div>`
   });
 
   let temoi=""
   entreprise.temoignages.forEach(element => {
-   temoi += `<div class="temoigna"> <div class="carte"><p class="com">${element.prenom}</p> <p class="type">${element.typeExperience}</p> <p>${element.commentaire}</p> <div class="note">${element.note}</div></div></div>`
+   temoi += `<div class="carte" data-aos="flip-down">  <div class="note">${avis(element.note)}</div><p class="com">${element.prenom}</p> <p class="type">${element.typeExperience}</p> <p>${element.commentaire}</p></div>`
   });
 
   document.querySelector("#heroo").innerHTML +=`
-  <div class="hero">
   <div class="abso">
     <h1>${data.entreprise.nomCommercial}</h1>
     <p>${data.entreprise.phraseAccroche}</p>
     <a href="" class="reserv">${data.entreprise.texteAppelAction}</a>
     </div>
-        <img src="assets/AOT-3.jpg" alt="">
-    </div>`
+        <img src="assets/AOT-3.jpg" alt="">`
 
   document.querySelector("#content").innerHTML +=
 salle
@@ -58,4 +58,34 @@ present
 document.querySelector("#contenttemoi").innerHTML +=
 temoi
 }
-  
+
+function avis(note){
+  let chaine=""
+
+  for(let i=1; i<=note; i++){
+    chaine+="★"
+  }
+
+  for(let j=0; j<5-note; j++){
+    chaine+="☆"
+  }
+  return chaine
+}
+
+var map = L.map('map').setView([48.851308, 2.289109], 13);
+
+L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.{ext}', {
+    minZoom: 0,
+    maxZoom: 20,
+    attribution: '&copy; <a href="https://www.stadiamaps.com/" target="_blank">Stadia Maps</a> &copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+    ext: 'png'
+}).addTo(map);
+
+L.marker([48.851308, 2.289109]).addTo(map)
+    .bindPopup('<h2>Dehors! EscapeGames Paris<br> 06 56 76 23 98 <br> escapegame.paris@gmail.com')
+    .openPopup();
+
+setTimeout(()=>{
+   AOS.init();
+},500)
+   
