@@ -1,92 +1,103 @@
-*{
+*{ /*Enlève toutes le bordures et nous laissent les modifiers comme ont le veux*/
     margin: 0px;
     padding: 0px;
     font-family: Franklin Gothic Medium, sans-serif;
     box-sizing: border-box;
   }
-
-  body{
+ 
+  body{ /*Mettre un fond a la page internet*/
     background-color: rgb(19, 19, 19);
   }
 
-header{
-    position: sticky;
-    width: 100%;
-    padding: 0px 0px;
+header{ /*Taille du header*/
+    position: sticky;  /*reste attacher a la position donner*/
+    top: 0; /*position du header au quel il doit rester attacher*/
+    z-index: 10; /*profondeur et donc mit en avant ou non*/
+    width: 100%; /*largeur du header*/
+    padding: 0px 0px; /*largeur et hauteur interieur du header*/
 }
 
-.nav{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 60px;
-  background-color: rgb(31, 31, 31);
+.nav{ /*Met la navbare côte à côte et les met au centre*/
+  display: flex; /*met ses enfants côtes à côtes*/
+  justify-content: center; /*justifie sont contenu au milieu*/
+  align-items: center; /*mets les items au centre, et les centres entre eux*/
+  gap: 60px; /*espacements*/
+  background-color: rgb(31, 31, 31); /*couleurs de fonds*/
   
 }
 
-img{
+img{ /*Taille du logo*/
     width: 78px;  
 }
 
-li{
+li{ /*Style des liste*/
     list-style-type: none;
 }
 
-a{
- 
-    text-decoration: none;
+a{ /*Décoration et couleur des a*/
+  text-decoration: none;
     color: rgb(255, 255, 255);
-    font-weight: 600;
+    font-weight: 600; /*épaisseur du texte*/
 }
 
+a:hover{ /*Animation qui agrandi le a quand la souris passe dessus*/
+  transform: scale(1.2); /*aggrandi le contenu*/
+  transition: all .3s ease-in-out; /*La durée de l'animation, pendant et après*/
+}
+
+li:hover{  /*Animation qui agrandi le a quand la souris passe dessus*/
+  transform: scale(1.2);
+  transition: all .3s ease-in-out;
+}
+/*Met le hero côte à côte et au centre*/
 #heroo{
   display: flex;
   justify-content: center;
-    position: relative;
+    position: relative; /*Permet de mettre du texte par dessus*/
 }
 
-#heroo img{
+#heroo img{ /*taille de l'image*/
     width: 100%;
-    filter: brightness(34%);
-    margin-bottom: 34px;
+    filter: brightness(34%); /*Filtre qui assombri ou éclaire l'image*/
+    margin-bottom: 34px; /*espacement en bas du contenu*/
 }
 
 
-.abso{
+.abso{ /*Position absolute qui permet de placer un texte au dessus d'un contenu en position relative*/
     position: absolute;
-    top: 33%;
-    left: 15%;
+    top: 33%; /*poistion en haut */
+    left: 15%; /*position à gauche */
     color: #fff;
-    z-index: 5;
+    z-index: 5; /*Profondeur du texte*/
 }
 
-.absolu{
+.absolu{ /*Position absolute qui permet de placer un texte au dessus d'un contenu en position relative*/
     position: absolute;
     top: 33%;
     left: 12%;
-    color: #fff;
-    z-index: 5;
+    color: #fff; /*couleur du texte*/
+    z-index: 5; /*Profondeur du texte*/
 }
 .activ{
-    position: relative;
-    margin-top: 12px;
+    position: relative; /*Permet de mettre du texte par dessus*/
+    margin-top: 12px; /*espacement en haut du contenu*/
 }
 
-.abso h1{
-    font-size: 72px;
+.abso h1{ /*Taille du titre*/
+    font-size: 72px; /*taille du texte*/
     
-    margin-bottom: 32px;
+    margin-bottom: 32px; 
 }
 
-.absolu h3{
+.absolu h3{ /*Taille du titre*/
     font-size: 42px;
    
     margin-bottom: 32px;
 }
 
-.abso p{
+.abso p{ /*Taille et centrage du texte*/
     font-size: 19px;
-    text-align: center;
+    text-align: center; /*centre les textes*/
     margin-bottom: 16px;
 }
 
@@ -97,63 +108,63 @@ a{
     margin-bottom: 16px;
 }
 
-.reserv{
+.reserv{ /*Bouton réserve*/
   display: block;
-  width: fit-content;
-    border-radius: 50px;
+  width: fit-content; /*Fait en sorte de s'adapter à son contenu*/
+    border-radius: 50px; /*Arrondi les bords*/
     padding: 9px 18px;
     background-color: rgba(81, 12, 142, 0.932);
-    color: #fffdfd;
+    color: #fffdfd; /*couleur du texte*/
    margin: auto;
    margin-top: 10%;
   font-size: 34px;
 }
 
-#content{
+#content{ /*Taille du content*/
   width: 100%;
 }
 
-.activ img{
+.activ img{ /*Taille de l'images et fait en sorte de ne pas l'applatir*/
     object-fit: cover;
     height: 400px;
     width: 90%;
    margin-left: 55px;
-   filter: brightness(62%);
+   filter: brightness(52%); /*Filtre qui assombri ou éclaire l'image*/
 }
 
-.activ a{
+.activ a{ /*Bouton a*/
   display: block;
-  width: fit-content;
+  width: fit-content; /*S'adapte a son contenu*/
     border-radius: 50px;
     padding: 5px 18px;
     background-color: rgba(81, 12, 142, 0.932);
-    color: #ffffff;
+    color: #ffffff; /*couleur du texte*/
 }
 
-#contentpre{
+#contentpre{ /*Les présentations, leur espacement, et leur position*/
     margin-left: 48px;
     display: flex;
-    gap: 200px;
-    position: relative;
+    gap: 200px; 
+    position: relative;/*Position*/
 }
 
-.presenta h4{
+.presenta h4{ /*Taille du titre*/
     font-size: 21px;
     font-weight: 700;
 }
 
-.presenta{
+.presenta{ /*taille des présentation et leurs couleurs*/
     width: 39%;
     font-size: 14px;
-    text-align: center;
-    color: #fff;
+    text-align: left;
+    color: #fff; /*couleur du texte*/
 }
 
-.card{
+.card{ /*taille des cartes*/
     width: 25%;
   }
 
-#contentpre {
+#contentpre { /*position des présentations et arrondi leurs bords*/
     flex-wrap: wrap;
     display: flex;
     justify-content: center;
@@ -164,7 +175,7 @@ a{
     gap: 190px;
   }
 
-.card{
+.card{ /*tailles des cartes, arrondi leur bords, et leur fond de couleur*/
     align-items: center;
     background-color: rgba(163, 163, 163, 0);
     margin-top: 32px;
@@ -172,37 +183,38 @@ a{
     border-radius: 16px;
 }
 
-  .card h4 {
+  .card h4 { /*taille du titre*/
     padding: 8px;
     margin-top: 16px;
     margin-bottom: 16px;
-    color: rgb(255, 253, 253);
+    color: rgb(255, 253, 253); /*couleur du texte*/
   }
 
-  .card p {
-    color: rgb(255, 255, 255);
+  .card p { /*couleur et position des textes*/
+    color: rgb(255, 255, 255); /*couleur du texte*/
     padding: 8px;
     margin-top: 16px;
     margin-bottom: 16px;
   }
   
-  .card img {
+  .card img { /*taille de l'image et ses bords arrondi en haut mais neutre en bas*/
     width: 100%;
     border-radius: 3% 3% 0% 0%;
   }
 
-  #map{
+  #map{ /*taille de la map et son positionnement*/
     margin: auto;
-    height: 350px;
-    width: 600px;
+    margin-top: 12px;
+    height: 300px; /*hauteur*/
+    width: 750px; /*largeur*/
   }
 
-  .carte{
+  .carte{  /*taille des cartes*/
     width: 15%;
   }
 
-#contenttemoi {
-    flex-wrap: wrap;
+#contenttemoi { /*les témoignages, leur taille, leur caractéristique, leur positions, les bords arrondi*/
+    flex-wrap: wrap;/*position en cascades*/
     display: flex;
     justify-content: center;
     margin-top: 2px;
@@ -212,7 +224,7 @@ a{
     gap: 30px;
   }
 
-.carte{
+.carte{ /*mettre les items au milieu, leur fond de couleurs, la tailles qu'ils peuvent prendre par rapport a leur parents*/
     align-items: center;
     background-color: rgb(0, 0, 0);
     margin-top: 2px;
@@ -221,46 +233,49 @@ a{
     border-radius: 16px;
 }
 
-  .carte .com {
+  .carte .com { /*Les noms des témoignages au milieu, leur couleurs et leur positionement*/
     text-align: center;
     padding: 8px;
     margin-top: 6px;
     margin-bottom: 9px;
-    color: rgb(255, 255, 255);
+    color: rgb(255, 255, 255); 
   }
 
-  .carte .type {
+  .carte .type { /*Type d'escape games, leurs couleurs, leurs positionement*/
     text-align: center;
-    color: rgb(255, 0, 119);
-    padding: 8px;
-    margin-top: 6px;
-    margin-bottom: 9px;
-  }
-
-  .carte p {
-    text-align: center;
-    color: rgb(255, 255, 255);
+    color: rgb(255, 0, 119); 
     padding: 8px;
     margin-top: 6px;
     margin-bottom: 9px;
   }
 
-#contentavan{
-  display: flex;
-  justify-content: center;
+  .carte p { /*texte des témoignages, leur couleurs et positionement*/
+    text-align: center;
+    color: rgb(255, 255, 255); /*couleur du texte*/
+    padding: 8px;
+    margin-top: 6px;
+    margin-bottom: 9px;
+  }
+
+#contentavan{  /*Les avantages*/
+    display: flex;
+    justify-content: center;
+    position: relative; /*Permet de mettre du texte par dessus*/
 }
 
-  .avantage{
-    width: 340px;
-    text-align: center;
+  .avantage{ /*tailles des avantages, leur positions, leur couleurs de fond et de textes, les bords arrondi*/
     margin-top: 21px;
-    margin-left: auto;
-    margin-right: auto;
-    color: #fff;
-    background-color: #4c1471;
-    border-radius: 4px;
-    padding: 13px 12px;
+    position: absolute;
+    top: 33%;
+    left: 12%;
+    color: #fff; /*couleur du texte*/
+    z-index: 5; /*Profondeur du texte*/
+  }
 
+  #contentavan img{
+    width: 23%;
+    margin-left: 23px;
+    margin-right: 12px;
   }
 
   footer{ /*Fin de page*/
@@ -276,24 +291,29 @@ a{
 
   }
 
-.fotter{ /*Adresse email et numéro de téléphone*/
+.footer{ /*Adresse email et numéro de téléphone*/
     margin-top: 12px;
 }
 
 .deuxmile{ /*Tout droit réservé*/
-    color: white;
+    color: white; 
     font-size: 12px;
 }
 
-.note{
+.note{ /*position des notes, et leur couleurs*/
   text-align: center;
-  color: yellow;
+  color: yellow; 
 }
 
-h5{
-  margin-top: 12px;
-  margin-bottom: 12px;
-  text-align: center;
-  color: #7b22b6;
-  font-size: 45px;
+h5{ /*tailles des titre*/
+  margin-top: 34px; 
+  margin-bottom: 34px; 
+  text-align: center; 
+  color: #7b22b6; 
+  font-size: 45px; 
 }
+
+i{
+  margin-right: 12px;
+}
+

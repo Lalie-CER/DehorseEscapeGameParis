@@ -1,26 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<!DOCTYPE html> <!--Minimal HTML-->
+<html lang="fr"> <!--Langue française-->
+<head> <!--Cerveau-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <!--Lien vers leaflet pour la map css--><link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+<!--Lien vers leaflet pour la map javascript--><script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> <!--Lien css pour les animations-->
+<link rel="stylesheet" href="styles.css"> <!--Lien pour relier le css-->
 
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
-<script src="script.js" defer></script>
-    
-    <title>Document</title>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script> <!--Lien js pour les animatiosn-->
+<script src="script.js" defer></script> <!--Lien pour relier le js-->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.4.2/css/all.css"><!--lien vers la librairi fontawesome-->
+    <title>Dehors!</title> <!--Nom de l'onglet-->
 </head>
-<body>
-<header>
+<body> <!--Corp de la page-->
+<header> <!--Barre de navigation-->
         
         <ul class="nav">
             <li><a href="index.html" title="lien vers la page accueil">Accueil</a></li>
             <li><a href="" title="lien vers la page A propos de nous">A propos de nous</a></li>
-            <a href="index.html" title="amène a l'accueil" class="logohead"><img src="assets/logo-escape-1.png" alt="logo nike"></a>
+          <!--Logo-->  <a href="index.html" title="amène a l'accueil" class="logohead"><img src="assets/logo-escape-1.png" alt="logo nike"></a>
             <li><a href="" title="lien vers la page evenement">Evenement</a></li>
             <li><a href="" title="lien vers la page contact">Contact</a></li>
         </ul>
@@ -29,33 +29,33 @@
         
     </header>
 
-    <div id="heroo" >
+    <div id="heroo" > <!--Image d'accueil avec la phrase d'accroche, le slogant et l'appel à action-->
 
     </div>
-    <div id="content" >
+    <div id="content" > <!--Contient les salles, leurs noms et leurs déscriptions-->
     </div>
     
-    <div id="contentpre" >
+    <div id="contentpre" > <!--Contient les présentations de ce qu'un escape game est-->
     </div>
-    <h5>Nos Avantages</h5>
-    <div id="contentavan" >
+    <h5>Nos Avantages</h5> <!--Titre nos avantages-->
+    <div id="contentavan" > <!--Contient les avantages-->
         
     </div>
-    <h5>Ils nous ont fait confiance !</h5>
-    <div id="contenttemoi" >
-       
+    <h5>Ils nous ont fait confiance !</h5> <!--Titre pour les témoignages-->
+    <div id="contenttemoi" > <!--Contient les témoignages avec les noms, la note et les commentaires-->
+    
     </div>
     <footer class="aligh-center"> <!--Fin de page-->
         <nav class="fin">
-        <a href="index.html" title="lien vers le site de nike"><img src="assets/logo-escape-1.png" alt="logo" class="logo aligh-center"></a>
+       <!--Logo--> <a href="index.html" title="lien vers le site de nike"><img src="assets/logo-escape-1.png" alt="logo" class="logo aligh-center"></a>
         <div class="foote">
-            <a href="">06 56 76 23 98</a> <br>
-        <a href="mailto:escapegame.paris@gmail.com">escapegame.paris@gmail.com</a>
+            <a href=""><i class="fa-solid fa-phone"></i>06 56 76 23 98</a> <br> 
+        <a href="mailto:escapegame.paris@gmail.com"><i class="fa-solid fa-envelope"></i>escapegame.paris@gmail.com</a> <!--Numéro de téléphone et adresse email-->
     </div>
     <div id="map"></div>
     </nav>
-    <p class="deuxmile">Tout droit réservé <br> 2024</p>
+    <p class="deuxmile">Tout droit réservé <br> 2024</p> <!--droit réserver-->
     </footer>
    
-</body>
-</html>
+</body><!--Fin du body-->
+</html> <!--Fin html-->
