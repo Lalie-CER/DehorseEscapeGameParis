@@ -31,12 +31,12 @@ function escapeGame(data) {
   });
   let present=""
   entreprise.presentation.forEach(element => {
-   present += `<div class="presenta"> <div><h4>${element.titre}</h4> <p class="prentp">${element.texte}</p></div></div>`
+   present += `<div class="presenta"> <div class="card"> <img src="${element.image}"alt=""><h4>${element.titre}</h4> <p class="prentp">${element.texte}</p> </div></div>`
   });
 
   let temoi=""
   entreprise.temoignages.forEach(element => {
-   temoi += `<div class="temoigna"> <p class="com">${element.prenom}</p> <p class="type">${element.typeExperience} ${element.commentaire} ${element.note}</div>`
+   temoi += `<div class="temoigna"> <div class="carte"><p class="com">${element.prenom}</p> <p class="type">${element.typeExperience}</p> <p>${element.commentaire}</p> <div class="note">${element.note}</div></div></div>`
   });
 
   document.querySelector("#heroo").innerHTML +=`
