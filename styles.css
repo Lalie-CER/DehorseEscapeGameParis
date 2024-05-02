@@ -206,7 +206,8 @@ li:hover{  /*Animation qui agrandi le a quand la souris passe dessus*/
     margin: auto;
     margin-top: 12px;
     height: 300px; /*hauteur*/
-    width: 750px; /*largeur*/
+    width: 450px; /*largeur*/
+    z-index: 1;
   }
 
   .carte{  /*taille des cartes*/
@@ -231,6 +232,7 @@ li:hover{  /*Animation qui agrandi le a quand la souris passe dessus*/
     padding: 20px 15px;
     width: 25%;
     border-radius: 16px;
+    box-shadow: 1px 1px 10px rgb(105, 15, 184);
 }
 
   .carte .com { /*Les noms des témoignages au milieu, leur couleurs et leur positionement*/
@@ -243,7 +245,7 @@ li:hover{  /*Animation qui agrandi le a quand la souris passe dessus*/
 
   .carte .type { /*Type d'escape games, leurs couleurs, leurs positionement*/
     text-align: center;
-    color: rgb(255, 0, 119); 
+    color: rgb(140, 25, 202); 
     padding: 8px;
     margin-top: 6px;
     margin-bottom: 9px;
@@ -260,22 +262,30 @@ li:hover{  /*Animation qui agrandi le a quand la souris passe dessus*/
 #contentavan{  /*Les avantages*/
     display: flex;
     justify-content: center;
-    position: relative; /*Permet de mettre du texte par dessus*/
 }
 
   .avantage{ /*tailles des avantages, leur positions, leur couleurs de fond et de textes, les bords arrondi*/
     margin-top: 21px;
-    position: absolute;
-    top: 33%;
-    left: 12%;
+    height: 200px;
+    width: 20%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: 50px;
+    margin-right: 50px;
+    text-align: center;
+    border-radius: 4px;
+    box-shadow: 1px 1px 20px rgb(105, 15, 184);
     color: #fff; /*couleur du texte*/
-    z-index: 5; /*Profondeur du texte*/
   }
 
-  #contentavan img{
-    width: 23%;
-    margin-left: 23px;
-    margin-right: 12px;
+  .avantage img{
+    filter: brightness(56%);
+  }
+
+  .avantage p{
+    padding: 12px 9px;
+    background-color: #000000a5;
+    margin-top: 30%;
   }
 
   footer{ /*Fin de page*/
@@ -317,3 +327,6 @@ i{
   margin-right: 12px;
 }
 
+.formulaire{
+  display: inline-block;
+}

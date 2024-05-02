@@ -4,9 +4,12 @@
       "phraseAccroche": "Découvrez l'aventure ultime avec Dehors!, votre destination d'escape game à Paris",
       "texteAppelAction": "Réservez votre aventure",
       "avantagesClients": [
-        "Énigmes captivantes pour des expériences uniques",
-        "Maîtres du jeu passionnés pour vous guider",
-        "Ambiances immersives dans des décors soigneusement conçus"
+        {"texte": "Énigmes captivantes pour des expériences uniques",
+          "image": "assets/istockphoto-473340103-640x640.jpg"},
+        {"texte":"Maîtres du jeu passionnés pour vous guider", 
+        "image": "assets/meneur-de-jeu-de-role-mj-jdr-1024x783.jpg"},
+        {"texte":"Ambiances immersives dans des décors soigneusement conçus", 
+        "image": "assets/gettyimages-1073597960-640x640.jpg"}
       ],
       "activites": [
         {
