@@ -1,8 +1,14 @@
 *{ /*Enlève toutes le bordures et nous laissent les modifiers comme ont le veux*/
     margin: 0px;
     padding: 0px;
-    font-family: Franklin Gothic Medium, sans-serif;
+    font-family: Franklin Gothic Medium, sans-serif; 
     box-sizing: border-box;
+  }
+
+  .bree-serif-regular {
+    font-family: "Bree Serif", serif;
+    font-weight: 400;
+    font-style: normal;
   }
  
   body{ /*Mettre un fond a la page internet*/
@@ -24,6 +30,7 @@ header{ /*Taille du header*/
   gap: 60px; /*espacements*/
   background-color: rgb(31, 31, 31); /*couleurs de fonds*/
   
+  
 }
 
 img{ /*Taille du logo*/
@@ -37,7 +44,7 @@ li{ /*Style des liste*/
 a{ /*Décoration et couleur des a*/
   text-decoration: none;
     color: rgb(255, 255, 255);
-    font-weight: 600; /*épaisseur du texte*/
+    font-family: "Bree Serif", serif;
 }
 
 a:hover{ /*Animation qui agrandi le a quand la souris passe dessus*/
@@ -85,13 +92,13 @@ li:hover{  /*Animation qui agrandi le a quand la souris passe dessus*/
 
 .abso h1{ /*Taille du titre*/
     font-size: 72px; /*taille du texte*/
-    
+    font-family: "Bree Serif", serif;
     margin-bottom: 32px; 
 }
 
 .absolu h3{ /*Taille du titre*/
     font-size: 42px;
-   
+    font-family: "Bree Serif", serif;
     margin-bottom: 32px;
 }
 
@@ -188,6 +195,7 @@ li:hover{  /*Animation qui agrandi le a quand la souris passe dessus*/
     margin-top: 16px;
     margin-bottom: 16px;
     color: rgb(255, 253, 253); /*couleur du texte*/
+    font-family: "Bree Serif", serif;
   }
 
   .card p { /*couleur et position des textes*/
@@ -316,6 +324,7 @@ li:hover{  /*Animation qui agrandi le a quand la souris passe dessus*/
 }
 
 h5{ /*tailles des titre*/
+  font-family: "Bree Serif", serif;
   margin-top: 34px; 
   margin-bottom: 34px; 
   text-align: center; 
@@ -328,5 +337,90 @@ i{
 }
 
 .formulaire{
-  display: inline-block;
+  box-shadow: 1px 1px 20px rgb(105, 15, 184);
+  background-color: rgba(0, 0, 0, 0.845);
+  width: 50%;
+  color: #fff;
+  margin: auto;
+  margin-top: 34px;
+  margin-bottom: 34px;
+  border-radius: 12px;
+  padding: 12px 10px;
 }
+
+h6{
+  font-family: "Bree Serif", serif;
+  font-size: 43px;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+#commentaire{
+background-color: #cfcfcf;
+border: 1px solid rgb(96, 96, 96);
+border-radius: 4px;
+width: 100%;
+height: 100px;
+margin-bottom: 23px;
+}
+
+
+
+
+
+
+.star{
+  margin-top: 12px;
+  text-align: center;
+}
+
+#sub{
+  background-color: #2b2b2b;
+  box-shadow: 1px 1px 12px rgb(119, 119, 119);
+  color: white;
+  font-size: 18px;
+  padding: 9px 9px;
+  border-radius: 34px;
+  margin-left: 43%;
+}
+
+.submit{
+  margin-bottom: 23px;
+}
+
+.titrenote{
+  font-size: 23px;
+  text-align: left;
+}
+/*
+.rating {
+  direction: rtl; Change la direction de la lecture
+  text-align: left;
+} */
+
+
+.rating a {
+  color: #aaa;
+  text-decoration: none;
+  font-size: 34px;
+  transition: color .4s;
+}
+
+.rating i{
+  color: gold;
+  margin-bottom: 12px;
+}
+
+/*.rating a:hover,
+.rating a:focus,
+.rating a:hover ~ a, /*Les ~ sont des sélecteurs d’adjacence indirecte, 
+cela permet de séléctionner tout les frères suivants d'un éléments et non le 
+précédents et donc de séléctionner d'un seul coup tout les frères d'un seul éléments
+.rating a:focus ~ a {
+  color: orange;
+  cursor: pointer;
+}
+
+html{
+  scroll-behavior: smooth;
+}*/

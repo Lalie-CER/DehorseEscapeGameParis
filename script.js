@@ -57,6 +57,8 @@ document.querySelector("#contentpre").innerHTML +=
 present
 document.querySelector("#contenttemoi").innerHTML +=
 temoi
+document.querySelectorAll(".rating").note +=
+chaine
 }
 //Une fonction pour que les notes sois sous forme d'étoiles, et qui rempli bien le nombre d'étoiles par rapport a la note
 function avis(note){
@@ -68,6 +70,7 @@ function avis(note){
   for(let j=0; j<5-note; j++){
     chaine+="☆"
   }
+  
   return chaine
 }
 //Pour afficher une carte avec un ping avec dessus marquers les informations du lieu
@@ -87,3 +90,40 @@ L.marker([48.851308, 2.289109]).addTo(map)
 setTimeout(()=>{
    AOS.init();
 },500)
+
+
+// Sélectionne tous les éléments HTML avec la classe "rating__star" et les stocke dans un tableau.
+const tableauEtoiles = [...document.getElementsByClassName("rating__star")];
+
+// Fonction pour gérer l'évaluation en fonction des étoiles cliquées.
+function creerNote(etoiles) {
+  // Classes CSS pour les étoiles actives et inactives.
+  const classeEtoileActive = "rating__star fas fa-star";
+  const classeEtoileInactive = "rating__star far fa-star";
+  // Longueur du tableau d'étoiles.
+  const longeurTableauEtoiles = etoiles.length;
+  
+  //initialiser une variable i nécessaire pour plus tard.
+  let i;
+
+    // Pour chaque étoile dans le tableau...
+  etoiles.forEach(etoile => {
+    
+    etoile.onclick = () => {
+      // Trouve l'index de l'étoile cliquée.
+      i = etoiles.indexOf(etoile);
+  
+      // Si l'étoile est inactive, active toutes les étoiles précédentes jusqu'à celle-ci.
+      if (etoile.className === classeEtoileInactive) {
+        for (i; i >= 0; --i) etoiles[i].className = classeEtoileActive;
+      } else {
+        // Sinon, désactive toutes les étoiles suivantes à partir de celle-ci.
+        for (i; i < longeurTableauEtoiles; ++i) etoiles[i].className = classeEtoileInactive;
+      }
+    };
+  });
+
+}
+
+// Appelle la fonction executerNotation avec le tableau d'étoiles en tant qu'argument.
+creerNote(tableauEtoiles);

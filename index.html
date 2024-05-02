@@ -6,8 +6,10 @@
     <!--Lien vers leaflet pour la map css--><link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
 <!--Lien vers leaflet pour la map javascript--><script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 
+
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> <!--Lien css pour les animations-->
 <link rel="stylesheet" href="styles.css"> <!--Lien pour relier le css-->
+<link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet"> <!--Relie google foot au css-->
 
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script> <!--Lien js pour les animatiosn-->
 <script src="script.js" defer></script> <!--Lien pour relier le js-->
@@ -22,7 +24,7 @@
             <li><a href="" title="lien vers la page A propos de nous">A propos de nous</a></li>
           <!--Logo-->  <a href="index.html" title="amène a l'accueil" class="logohead"><img src="assets/logo-escape-1.png" alt="logo nike"></a>
             <li><a href="" title="lien vers la page evenement">Evenement</a></li>
-            <li><a href="" title="lien vers la page contact">Contact</a></li>
+            <li><a href="#contact" title="lien vers la page contact">Contact</a></li>
         </ul>
 
 
@@ -45,8 +47,33 @@
     <div id="contenttemoi" > <!--Contient les témoignages avec les noms, la note et les commentaires-->
     
     </div>
+ <section class="formulaire">
+    <h6>Laissez nous un commentaire !</h6>
+    <h6 class="titrenote">Mettez nous une note !</h6>
+   <!-- <div class="rating">
+        <a href="#5" title="Donner 5 étoiles">★</a>
+        <a href="#4" title="Donner 4 étoiles">★</a>
+        <a href="#3" title="Donner 3 étoiles">★</a>
+        <a href="#2" title="Donner 2 étoiles">★</a>
+        <a href="#1" title="Donner 1 étoile">★</a>
+     </div>-->
 
-    <footer class="aligh-center"> <!--Fin de page-->
+     <div class="rating">
+        <i class="rating__star far fa-star"></i>
+        <i class="rating__star far fa-star"></i>
+        <i class="rating__star far fa-star"></i>
+        <i class="rating__star far fa-star"></i>
+        <i class="rating__star far fa-star"></i>
+        
+  </div>
+  
+    <input type="textarea" id="commentaire" name="commentaire" required />
+    
+    <div class="submit">
+        <a href="" id="sub">Envoyer</a>
+    </div>
+ </section>
+    <footer id="contact" class="aligh-center"> <!--Fin de page-->
         <nav class="fin">
        <!--Logo--> <a href="index.html" title="lien vers le site de nike"><img src="assets/logo-escape-1.png" alt="logo" class="logo aligh-center"></a>
         <div class="foote">
